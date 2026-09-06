@@ -6,7 +6,7 @@ Version: 1.0
 Architectures: aarch64
 Components: main
 Description: Community maintained Termux packages
-Date: Sun, 06 Sep 2026 09:51:06 +0000
+Date: Sun, 06 Sep 2026 09:55:22 +0000
 SHA256:
- bc6591121d7b766f4a406edba828202d6d5268d005aca6ef35e4b15a9b53fc9c 523 dists/termux/main/binary-aarch64/Packages
- c9696e76c912727cf9d1303f7090742fb0025950f8974a03f7431f0440d6d5c9 459 dists/termux/main/binary-aarch64/Packages.gz
+ bc6591121d7b766f4a406edba828202d6d5268d005aca6ef35e4b15a9b53fc9c 523 main/binary-aarch64/Packages
+ 04012c55a72740d9568fa7a8505373c2dfc86aeb919821b60b72f2d1feea2f0b 459 main/binary-aarch64/Packages.gz

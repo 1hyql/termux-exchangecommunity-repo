@@ -22,7 +22,7 @@ mkdir -p "$DIST"
   find "$DIST" -type f \( -name "Packages" -o -name "Packages.gz" \) | sort | while read -r f; do
     size=$(stat -c%s "$f")
     hash=$(sha256sum "$f" | awk '{print $1}')
-    rel="${f#$DOCS/}"
+    rel="${f#$DIST/}"
     echo " $hash $size $rel"
   done
 } > "$RELEASE_FILE"
