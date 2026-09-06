@@ -1,0 +1,23 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: Termux Exchange Community Repo
+Label: Termux Exchange Community Repo
+Suite: termux
+Codename: termux
+Version: 1.0
+Architectures: aarch64
+Components: main
+Description: Community maintained Termux packages
+Date: Sun, 06 Sep 2026 09:22:45 +0000
+SHA256:
+ 72618befea521e36529818c161a13ce17a1f09474a6052569deb6087e4bcf8b3 719 dists/termux/main/binary-aarch64/Packages
+ 16733214cfc5d31e1e5e6ba4b88b765dd507263fa4f560b59130e6bb456f37ee 555 dists/termux/main/binary-aarch64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iJEEARYKADkWIQRjXiOdSYdC1PeQ0tm6GkKH7eBWigUCap0w7BsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMiwzLDIACgkQuhpCh+3gVooHqQD/bhEEWJzWMyMib5WwHgZ0
+CVWOonZ3fOoWZEl2hQWMPsoBANgySDAQuXddGNIKgXBoi6cTyVIOi6dsLNNU2j5K
+iu8C
+=IsPB
+-----END PGP SIGNATURE-----

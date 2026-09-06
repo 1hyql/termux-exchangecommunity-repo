@@ -1,0 +1,20 @@
+ new Debian package, version 2.0.
+ size 5418 bytes: control archive=493 bytes.
+     393 bytes,    12 lines      control
+      24 bytes,     3 lines   *  postinst             #!/bin/sh
+ Package: gituploader
+ Version: 1.0.0
+ Section: utils
+ Priority: optional
+ Architecture: all
+ Installed-Size: 40
+ Depends: python3
+ Maintainer: 1hyql <1hyql@example.com>
+ Description: Git 上传命令生成器（Linux / Termux 命令行版）
+  多仓库 + 多用途命令 + 占位符 + 一键复制到剪贴板。
+  轻量，仅依赖 Python 标准库。
+ Homepage: https://github.com/1hyql/git-uploader
+Filename: packages/gituploader_1.0.0_all.deb
+Size: 5418
+SHA256: 690ad60a1654a34401cd2024d1dd6943ae17c406aa629dc5502e9d0eba213a2a
+
