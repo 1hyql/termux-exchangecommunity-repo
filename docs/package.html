@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="软件包 - Termux Exchange Community Repo，展示推荐软件与全部软件包，支持搜索跳转。">
+<meta name="theme-color" content="#27ae60">
+<title>软件包 - Termux Exchange Community Repo</title>
+<link rel="icon" href="logo.jpg" type="image/jpeg">
+<link rel="stylesheet" href="assets/search.css">
+</head>
+<body>
+
+<!-- 顶部固定导航 -->
+<nav class="top-nav" id="topNav">
+  <a class="nav-brand" href="index.html">
+    <img src="logo.jpg" alt="Termux Exchange Community Repo logo">
+    <span>Termux Exchange Community Repo</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">首页</a></li>
+    <li><a href="package.html" class="active">软件包</a></li>
+    <li><a href="search.html">搜索</a></li>
+  </ul>
+</nav>
+
+<div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+<div class="menu-overlay" id="menuOverlay"></div>
+<div class="menu" id="menu">
+  <button class="close-btn" id="closeMenu" aria-label="关闭菜单">✕</button>
+  <ul>
+    <li><a href="index.html">🏠 首页</a></li>
+    <li><a href="package.html" class="active">📦 软件包</a></li>
+    <li><a href="search.html">🔎 搜索</a></li>
+  </ul>
+  <div class="menu-divider"></div>
+  <div class="menu-section-title">镜像源</div>
+  <ul>
+    <li><a href="index.html#source-status">📡 镜像源状态</a></li>
+    <li><a href="index.html#add-source">➕ 一键配置</a></li>
+    <li><a href="index.html#security">🔐 安全验证</a></li>
+  </ul>
+</div>
+
+<main class="content-container">
+
+  <!-- 页头 + 搜索框（最上方） -->
+  <div class="page-header">
+    <h1>📦 软件包</h1>
+    <p>浏览社区源中的推荐软件与全部软件包，点击搜索跳转到搜索结果页</p>
+  </div>
+
+  <div class="dl-search-wrap">
+    <div class="dl-search-box">
+      <input id="searchInput" type="search" placeholder="输入关键词搜索软件包…" autocomplete="off" enterkeyhint="search" aria-label="搜索软件包">
+      <button id="searchBtn" type="button" class="dl-search-btn">搜索</button>
+    </div>
+  </div>
+  <p class="result-meta" id="pkgCount">加载中…</p>
+
+  <!-- 推荐软件 -->
+  <section class="card" id="recommendedSection" aria-labelledby="rec-title" hidden>
+    <div class="card-head">
+      <h2 id="rec-title" class="card-title"><span class="card-icon">⭐</span> 推荐软件</h2>
+    </div>
+    <div class="rec-grid" id="recommendedList">
+      <div class="loading">加载中…</div>
+    </div>
+  </section>
+
+  <!-- 全部软件包 -->
+  <section class="card results" aria-labelledby="list-title">
+    <div class="card-head">
+      <h2 id="list-title" class="card-title"><span class="card-icon">📦</span> 全部软件包</h2>
+      <a class="btn mini" href="search.html">去搜索页 ↗</a>
+    </div>
+    <div id="pkgList">
+      <div class="loading">加载软件包数据…</div>
+    </div>
+  </section>
+
+</main>
+
+<button class="back-to-top" id="backToTop" title="回到顶部">↑</button>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">首页</a>
+      <a href="package.html">软件包</a>
+      <a href="search.html">搜索</a>
+      <a href="https://1hyql.github.io/termux" target="_blank" rel="noopener noreferrer">官网</a>
+    </div>
+    <p>&copy; 2026 Termux Exchange Community Repo</p>
+  </div>
+</footer>
+
+<script src="assets/package.js"></script>
+</body>
+</html>

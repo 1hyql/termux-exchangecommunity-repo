@@ -1,0 +1,16 @@
+{
+  "updated_at": "2026-09-06T14:51:18+00:00",
+  "packages": [
+    {
+      "name": "gituploader",
+      "version": "1.0.0",
+      "section": "utils",
+      "priority": "optional",
+      "architecture": "all",
+      "maintainer": "月",
+      "description": "Git 上传命令生成器（Linux / Termux 命令行版）",
+      "homepage": "https://github.com/1hyql/git-uploader",
+      "recommended": true
+    }
+  ]
+}

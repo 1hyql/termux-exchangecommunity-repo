@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Termux Exchange Community Repo — 社区自营 Termux 附加源，提供源状态、安全检查与一键配置。">
+<meta name="theme-color" content="#3498db">
+<title>Termux Exchange Community Repo</title>
+<link rel="icon" href="logo.jpg" type="image/jpeg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- 顶部固定导航 -->
+<nav class="top-nav" id="topNav">
+  <a class="nav-brand" href="index.html">
+    <img src="logo.jpg" alt="Termux Exchange Community Repo logo">
+    <span>Termux Exchange Community Repo</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">首页</a></li>
+    <li><a href="package.html">软件包</a></li>
+    <li><a href="search.html">搜索</a></li>
+  </ul>
+</nav>
+
+<div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+<div class="menu-overlay" id="menuOverlay"></div>
+<div class="menu" id="menu">
+  <button class="close-btn" id="closeMenu" aria-label="关闭菜单">✕</button>
+  <ul>
+    <li><a href="index.html" class="active">🏠 首页</a></li>
+    <li><a href="package.html">📦 软件包</a></li>
+    <li><a href="search.html">🔎 搜索</a></li>
+  </ul>
+  <div class="menu-divider"></div>
+  <div class="menu-section-title">本页</div>
+  <ul>
+    <li><a href="#source-status">📡 镜像源状态</a></li>
+    <li><a href="#security">🔐 安全验证</a></li>
+    <li><a href="#add-source">➕ 一键配置</a></li>
+  </ul>
+</div>
+
+<main class="content-container">
+
+  <!-- 镜像源状态 -->
+  <section class="card" id="source-status" aria-labelledby="status-title">
+    <div class="card-head">
+      <h2 id="status-title" class="card-title">
+        <span class="card-icon">📡</span> 镜像源状态
+      </h2>
+      <span id="sourceStatus" class="pulse" data-state="loading">
+        <span class="pulse-dot"></span> 检测中…
+      </span>
+    </div>
+
+    <div class="status-grid">
+      <div class="status-item full">
+        <span class="status-label">源地址</span>
+        <code class="status-value">https://1hyql.github.io/termux-exchangecommunity-repo</code>
+      </div>
+      <div class="status-item">
+        <span class="status-label">源名称</span>
+        <span class="status-value" id="sourceName">—</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">软件包数量</span>
+        <strong class="status-value accent" id="pkgTotal">—</strong>
+      </div>
+      <div class="status-item">
+        <span class="status-label">最近更新</span>
+        <span class="status-value" id="updatedAt">—</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">可访问状态</span>
+        <span class="status-value" id="reachable">—</span>
+      </div>
+      <div class="status-item full">
+        <span class="status-label">公钥地址</span>
+        <code class="status-value">https://1hyql.github.io/termux-exchangecommunity-repo/key/community-repo.asc</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- 安全验证（密钥与指纹） -->
+  <section class="card" id="security" aria-labelledby="security-title">
+    <div class="card-head">
+      <h2 id="security-title" class="card-title">
+        <span class="card-icon">🔐</span> 安全验证
+      </h2>
+    </div>
+    <p class="card-desc">添加前请核验公钥指纹，确保连接的是本自营源，防止中间人攻击。</p>
+
+    <div class="status-grid">
+      <div class="status-item full">
+        <span class="status-label">GPG 密钥指纹</span>
+        <code class="status-value mono">635E 239D 4987 42D4 F790 D2D9 BA1A 4287 EDE0 568A</code>
+      </div>
+      <div class="status-item full">
+        <span class="status-label">公钥文件</span>
+        <code class="status-value">key/community-repo.asc（已随源码仓库发布）</code>
+      </div>
+    </div>
+
+    <p class="card-desc" style="margin-top:14px;">核验命令（比对输出中的指纹是否与上方一致）：</p>
+    <div class="codebox" data-copytext='curl -fsSL "https://1hyql.github.io/termux-exchangecommunity-repo/key/community-repo.asc" | gpg --with-fingerprint --show-keys -'>
+      <button type="button" class="copy-btn" data-copy-btn>复制</button>
+      <pre><code>curl -fsSL "https://1hyql.github.io/termux-exchangecommunity-repo/key/community-repo.asc" | gpg --with-fingerprint --show-keys -</code></pre>
+    </div>
+  </section>
+
+  <!-- 一键配置 -->
+  <section class="card" id="add-source" aria-labelledby="add-title">
+    <div class="card-head">
+      <h2 id="add-title" class="card-title">
+        <span class="card-icon">➕</span> 镜像源一键配置
+      </h2>
+    </div>
+    <p class="card-desc">在 Termux 终端执行以下命令，自动导入公钥、写入软件源并更新，全程一条命令完成。</p>
+    <div class="codebox" data-copytext='pkg install -y curl && mkdir -p "$PREFIX/etc/apt/keyrings" "$PREFIX/etc/apt/sources.list.d" && curl -fsSL "https://1hyql.github.io/termux-exchangecommunity-repo/key/community-repo.asc" -o "$PREFIX/etc/apt/keyrings/community-repo.asc" && printf &#39;%s\n&#39; &#39;deb [signed-by=/data/data/com.termux/files/usr/etc/apt/keyrings/community-repo.asc] https://1hyql.github.io/termux-exchangecommunity-repo termux main&#39; &gt; "$PREFIX/etc/apt/sources.list.d/community.list" && apt update'>
+      <button type="button" class="copy-btn" data-copy-btn>复制</button>
+      <pre><code>pkg install -y curl &amp;&amp; mkdir -p "$PREFIX/etc/apt/keyrings" "$PREFIX/etc/apt/sources.list.d" &amp;&amp; curl -fsSL "https://1hyql.github.io/termux-exchangecommunity-repo/key/community-repo.asc" -o "$PREFIX/etc/apt/keyrings/community-repo.asc" &amp;&amp; printf '%s\n' 'deb [signed-by=/data/data/com.termux/files/usr/etc/apt/keyrings/community-repo.asc] https://1hyql.github.io/termux-exchangecommunity-repo termux main' &gt; "$PREFIX/etc/apt/sources.list.d/community.list" &amp;&amp; apt update</code></pre>
+    </div>
+    <p class="card-desc" style="margin-top:12px;">
+      配置完成后即可使用：<code>apt update</code> → <code>pkg install 包名</code>，或前往
+      <a href="package.html">软件包页</a> 浏览 / <a href="search.html">搜索软件包</a>。
+    </p>
+  </section>
+
+</main>
+
+<button class="back-to-top" id="backToTop" title="回到顶部">↑</button>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">首页</a>
+      <a href="package.html">软件包</a>
+      <a href="search.html">搜索</a>
+      <a href="https://1hyql.github.io/termux" target="_blank" rel="noopener noreferrer">官网</a>
+    </div>
+    <p>&copy; 2026 Termux Exchange Community Repo</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
