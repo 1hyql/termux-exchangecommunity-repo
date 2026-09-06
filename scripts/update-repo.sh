@@ -13,16 +13,16 @@ for deb in "$DOCS"/packages/*.deb; do
     [ -e "$deb" ] || continue
 
     {
-        dpkg-deb -f "$deb" Package
-        dpkg-deb -f "$deb" Version
-        dpkg-deb -f "$deb" Section
-        dpkg-deb -f "$deb" Priority
-        dpkg-deb -f "$deb" Architecture
-        dpkg-deb -f "$deb" Installed-Size
-        dpkg-deb -f "$deb" Depends
-        dpkg-deb -f "$deb" Maintainer
-        dpkg-deb -f "$deb" Description
-        dpkg-deb -f "$deb" Homepage
+        echo "Package: $(dpkg-deb -f "$deb" Package)"
+        echo "Version: $(dpkg-deb -f "$deb" Version)"
+        echo "Section: $(dpkg-deb -f "$deb" Section)"
+        echo "Priority: $(dpkg-deb -f "$deb" Priority)"
+        echo "Architecture: $(dpkg-deb -f "$deb" Architecture)"
+        echo "Installed-Size: $(dpkg-deb -f "$deb" Installed-Size)"
+        echo "Depends: $(dpkg-deb -f "$deb" Depends)"
+        echo "Maintainer: $(dpkg-deb -f "$deb" Maintainer)"
+        echo "Description: $(dpkg-deb -f "$deb" Description)"
+        echo "Homepage: $(dpkg-deb -f "$deb" Homepage)"
         echo "Filename: packages/$(basename "$deb")"
         echo "Size: $(stat -c%s "$deb")"
         echo "SHA256: $(sha256sum "$deb" | awk '{print $1}')"

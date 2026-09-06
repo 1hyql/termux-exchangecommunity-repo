@@ -9,15 +9,15 @@ Version: 1.0
 Architectures: aarch64
 Components: main
 Description: Community maintained Termux packages
-Date: Sun, 06 Sep 2026 09:47:36 +0000
+Date: Sun, 06 Sep 2026 09:51:06 +0000
 SHA256:
- 23c64ed08431e75037284bf1f4b4795b70fa44970930797a74961933611e6b07 412 dists/termux/main/binary-aarch64/Packages
- ba57b8577d0ad1dc21e6faf867b3536ade5962a758b5eba596f36c4bbc620b7c 385 dists/termux/main/binary-aarch64/Packages.gz
+ bc6591121d7b766f4a406edba828202d6d5268d005aca6ef35e4b15a9b53fc9c 523 dists/termux/main/binary-aarch64/Packages
+ c9696e76c912727cf9d1303f7090742fb0025950f8974a03f7431f0440d6d5c9 459 dists/termux/main/binary-aarch64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iJEEARYKADkWIQRjXiOdSYdC1PeQ0tm6GkKH7eBWigUCap02vxsUgAAAAAAEAA5t
-YW51MiwyLjUrMS4xMiwzLDIACgkQuhpCh+3gVop++wEA+8ovqXSJyq6PkJ0m+cZn
-36jzQGv3yJo1CzJ+BOk1dA0BAL6SfwloLHJMttS4lv10+Cjd11d19Tpn6IzBZiwB
-/gcN
-=b1hr
+iJEEARYKADkWIQRjXiOdSYdC1PeQ0tm6GkKH7eBWigUCap03ixsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMiwzLDIACgkQuhpCh+3gVopOhwEAmmUnP4O1Gx+le14FAaOj
+t7ja5rfWWT5EYUajRTUId1gA/iYgT1GBLDfKk5KrqRZLESasDcoY5FAfnKK5f5bU
+/G4N
+=qx6y
 -----END PGP SIGNATURE-----
