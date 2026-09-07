@@ -108,75 +108,6 @@ Termux Exchange Community Repo 是一个社区自营的 Termux 软件包仓库�
 
 ---
 
-## 部署说明
-
-### 1. 环境要求
-
-- Linux/Unix 系统（用于构建脚本）
-- bash
-- curl
-- dpkg-deb（用于解析 .deb 包）
-- gzip（用于压缩索引文件）
-- gpg（用于签名）
-
-### 2. 构建步骤
-
-1. **准备软件包**：
-   ```bash
-   # 将 .deb 文件放入 docs/packages/ 目录
-   cp *.deb docs/packages/
-   ```
-
-2. **更新仓库索引**：
-   ```bash
-   ./scripts/update-repo.sh
-   ```
-
-3. **生成网站数据**：
-   ```bash
-   ./scripts/make-web-index.sh
-   ```
-
-4. **签名发布**：
-   ```bash
-   ./scripts/sign-release.sh
-   ./scripts/make-release.sh
-   ```
-
-### 3. 一键配置命令
-
-用户可以在 Termux 中执行以下命令添加源：
-
-```bash
-pkg install -y curl && mkdir -p "$PREFIX/etc/apt/keyrings" "$PREFIX/etc/apt/sources.list.d" && curl -fsSL "https://1hyql.github.io/termux-exchangecommunity-repo/key/community-repo.asc" -o "$PREFIX/etc/apt/keyrings/community-repo.asc" && printf '%s\n' 'deb [signed-by=/data/data/com.termux/files/usr/etc/apt/keyrings/community-repo.asc] https://1hyql.github.io/termux-exchangecommunity-repo termux main' > "$PREFIX/etc/apt/sources.list.d/community.list" && apt update
-```
-
----
-
-## 安全验证
-
-### GPG 密钥指纹
-
-```
-635E 239D 4987 42D4 F790  D2D9 BA1A 4287 EDE0 568A
-```
-
-### 验证方法
-
-```bash
-curl -fsSL "https://1hyql.github.io/termux-exchangecommunity-repo/key/community-repo.asc" | gpg --with-fingerprint --show-keys -
-```
-
----
-
-## 浏览器兼容
-
-- Chrome / Firefox / Safari / Edge 最新版
-- 移动端 Safari / Chrome 适配
-- IE 不支持
-
----
-
 ## 维护指南
 
 ### 1. 添加新软件包
@@ -240,12 +171,6 @@ RECOMMENDED="gituploader another-package"
 - 提供详细的错误信息
 - 附上截图（如适用）
 - 说明复现步骤
-
----
-
-## 许可证
-
-本项目采用 MIT 许可证。详见 [LICENSE](LICENSE) 文件。
 
 ---
 
