@@ -65,7 +65,8 @@ Termux Exchange Community Repo 是一个社区自营的 Termux 软件包仓库�
 │   ├── update-repo.sh        # 更新仓库索引
 │   ├── make-release.sh       # 发布脚本
 │   └── sign-release.sh       # 签名脚本
-└── README.md                 # 项目文档
+├── README.md                 # 用户文档
+└── OPERATIONS.md             # 运维文档
 ```
 
 ---
@@ -110,48 +111,8 @@ Termux Exchange Community Repo 是一个社区自营的 Termux 软件包仓库�
 
 ## 维护指南
 
-### 1. 添加新软件包
-
-1. 将 .deb 文件放入 `docs/packages/` 目录
-2. 运行 `./scripts/update-repo.sh` 更新索引
-3. 运行 `./scripts/make-web-index.sh` 生成网站数据
-4. 提交更改并推送
-
-### 2. 更新软件包
-
-1. 替换 `docs/packages/` 目录中的旧 .deb 文件
-2. 重复上述构建步骤
-
-### 3. 推荐软件包
-
-在 `make-web-index.sh` 脚本中设置 `RECOMMENDED` 变量：
-
-```bash
-# 推荐包（空格分隔）
-RECOMMENDED="gituploader another-package"
-```
-
----
-
-## 故障排除
-
-### 1. 源无法访问
-
-- 检查 GitHub Pages 状态
-- 验证证书有效性
-- 确认文件路径正确
-
-### 2. 软件包安装失败
-
-- 检查 GPG 密钥是否正确导入
-- 验证软件包架构是否匹配
-- 确认依赖关系是否满足
-
-### 3. 网站显示异常
-
-- 检查 `packages.json` 格式是否正确
-- 验证 JavaScript 控制台是否有错误
-- 确认 CSS 文件路径正确
+软件包添加、索引生成、Release 签名、发布检查和故障排查请查看
+[OPERATIONS.md](OPERATIONS.md)。
 
 ---
 
