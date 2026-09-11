@@ -122,10 +122,7 @@ Termux Exchange Community Repo 是一个社区自营的 Termux 软件包仓库�
 
 ### 提交新软件包
 
-1. Fork 本仓库
-2. 将 .deb 文件放入 `docs/packages/` 目录
-3. 运行构建脚本更新数据
-4. 提交 PR 并说明变更内容
+通过QQ联系管理/群主、频道主
 
 ### 报告问题
 
