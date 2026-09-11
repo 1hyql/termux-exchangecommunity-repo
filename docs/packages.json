@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T14:51:18+00:00",
+  "updated_at": "2026-09-11T12:21:04+08:00",
   "packages": [
     {
       "name": "gituploader",
@@ -7,10 +7,9 @@
       "section": "utils",
       "priority": "optional",
       "architecture": "all",
-      "maintainer": "月",
-      "description": "Git 上传命令生成器（Linux / Termux 命令行版）",
-      "homepage": "https://github.com/1hyql/git-uploader",
-      "recommended": true
+      "maintainer": "GitUploader Team <team@gituploader.com>",
+      "description": "Git upload command generator",
+      "recommended": false
     }
   ]
 }
