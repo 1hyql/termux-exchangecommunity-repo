@@ -1,5 +1,5 @@
 Package: gituploader
-Version: 1.0.4
+Version: 1.0.8
 Section: utils
 Priority: optional
 Architecture: all
@@ -9,7 +9,7 @@ Maintainer: GitUploader Team <team@gituploader.com>
 Description: Git upload command generator
  Stores reusable Git upload commands and expands runtime placeholders.
 Homepage: 
-Filename: packages/gituploader_1.0.4_all.deb
-Size: 4356
-SHA256: 60acc03965eafd733af728b374dbf2a6043d4e1b744eee29c4e3b0289fd9f874
+Filename: packages/gituploader_1.0.8_all.deb
+Size: 5250
+SHA256: 5f109b60a027e60db2a5d350188a16be1a09bfa089d369b28b507dd92e1243a6
 

@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-09-12T14:37:35+08:00",
+  "updated_at": "2026-09-12T15:11:45+08:00",
   "packages": [
     {
       "name": "gituploader",
-      "version": "1.0.4",
+      "version": "1.0.8",
       "section": "utils",
       "priority": "optional",
       "architecture": "all",
