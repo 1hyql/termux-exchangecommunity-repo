@@ -9,15 +9,15 @@ Version: 1.0
 Architectures: aarch64
 Components: main
 Description: Community maintained Termux packages
-Date: Sat, 12 Sep 2026 07:11:45 +0000
+Date: Sat, 12 Sep 2026 07:23:06 +0000
 SHA256:
- fb492524501b8cc27ec42cf6d91e01c2685c786d0e490fdae43f47c782ecb91a 428 main/binary-aarch64/Packages
- 00b8fd22eb9d8e5235c151a1d2ba9a06f7a50cb833368815b46968e8b653cfaf 316 main/binary-aarch64/Packages.gz
+ 8629349e4a49b257e48db790f91d4fbb956bc7fce96c1e4354cb2fea15305723 428 main/binary-aarch64/Packages
+ 691c2689517dc8107cd24208d2c69652722f36eebc88e29681e54fe0d43602d2 317 main/binary-aarch64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iJEEARYKADkWIQRjXiOdSYdC1PeQ0tm6GkKH7eBWigUCaqT7NxsUgAAAAAAEAA5t
-YW51MiwyLjUrMS4xMiwzLDIACgkQuhpCh+3gVor3vQD+J5LWKtibgnWbKGsmP6tD
-ggtpMOQciq0D2yZQwBgy3NYBAPEy0m9FXAWUDFRRxuTMNK8SmCj9q0KnKey9m2YA
-RDIA
-=3OTb
+iJEEARYKADkWIQRjXiOdSYdC1PeQ0tm6GkKH7eBWigUCaqT94hsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMiwzLDIACgkQuhpCh+3gVoqkswEA6Z+DlNhhcf3XE4KxywhX
+Qup4WQcws+tQfPiduwVzV8kA+gJhxloYwPT1p6hCQGZLaBp0uUVnzq4QihM9obKr
+/BwI
+=Ud8j
 -----END PGP SIGNATURE-----
